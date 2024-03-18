@@ -19,15 +19,15 @@ eval(fs.readFileSync('code.js')+'');
 
         var test2result1 = [0, 1, 3, 2, 4];        //search starting at 0 and finding 4
         var test2result2 = [1, 0, 2, 4];                  //search starting at 1 and finding 4 (cycle)
-        var test3result3 = [];                  //search starting at 0 and finding 6 (doesnt't exist)
+        var test2result3 = [];                  //search starting at 0 and finding 6 (doesnt't exist)
 
         test.value(depthFirstSearch(test2, 0, 4)) == test2result1;
         test.value(depthFirstSearch(test2, 1, 4)) == test2result2;
-        test.value(depthFirstSearch(test2, 0, 6)) == test3result3;
+        test.value(depthFirstSearch(test2, 0, 6)) == test2result3;
 
         var test3 = [];
 
         var test3result1 = [];            //search for anything in empty graph
 
-        test.value(depthFirstSearch(test3, 0, 2)) == search3Result;
+        test.value(depthFirstSearch(test3, 0, 2)) == test3result1;
         
