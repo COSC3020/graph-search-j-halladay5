@@ -3,14 +3,14 @@ var test = require('unit.js');
 
 eval(fs.readFileSync('code.js')+'');
 
-        var test1 = [[1,2,3], [], [0,8], [], [1,5,6], [6], [7], [], [7]];
+        var test1 = [[1,2,3], [4], [0,8], [], [1,5,6], [6], [7], [], [7]];
 
         var test1result1 = [0, 1, 4, 5, 6, 7];    //search starting at 0 and finding node 7 
         var test1result2 = [];                    //search starting at 3 and finding 7 (should return empty)
         var test1result3 = [];                    //search starting at 0 and finding 10 (doesn't exist so return empty)
         var test1result4 = [2, 0, 1, 4, 5, 6, 7]; //search starting at 2 and finding 7, should go to 0 first since tie-breaker is lesser node unvisited
 
-        test.value(depthFirstSearch(test1, 0, 7)) == test1result1;
+        test.array(depthFirstSearch(test1, 0, 7)) == test1result1;
         test.value(depthFirstSearch(test1, 3, 7)) == test1result2;
         test.value(depthFirstSearch(test1, 0, 10)) == test1result3;
         test.value(depthFirstSearch(test1, 2, 7)) == test1result4;
