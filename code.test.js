@@ -3,7 +3,7 @@ var test = require('unit.js');
 
 eval(fs.readFileSync('code.js')+'');
 
-        var test1 = [[1,2,3], [4], [0,8], [], [1,5,6], [6], [7], [], [7]];
+        var test1 = [[1,2,3], [], [0,8], [], [1,5,6], [6], [7], [], [7]];
 
         var test1result1 = [0, 1, 4, 5, 6, 7];    //search starting at 0 and finding node 7 
         var test1result2 = [];                    //search starting at 3 and finding 7 (should return empty)
