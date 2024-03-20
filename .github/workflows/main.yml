@@ -6,8 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: npm install formidable
-    - run: npm install formidable@v3
     - run: npm i jsverify
-    - run: npm i unit.js
     - run: node code.test.js
