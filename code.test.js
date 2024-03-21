@@ -4,7 +4,7 @@ const assert = require('assert');
 eval(fs.readFileSync('code.js')+'');
 
 
-var test1 = [[1,2,3], [], [0,8], [], [1,5,6], [6], [7], [], [7]];
+var test1 = [[1,2,3], [4], [0,8], [], [1,5,6], [6], [7], [], [7]];
 
 assert(JSON.stringify(depthFirstSearch(test1,0,7)) == JSON.stringify([0, 1, 4, 5, 6, 7]));
 assert(JSON.stringify(depthFirstSearch(test1,3,7)) == JSON.stringify([]));
