@@ -34,3 +34,7 @@ the it's edges have also already been traversed recursively, so they are also vi
 ## Bonus
 
 Implement and analyze breadth-first search.
+
+The worst case of breadth-first search is when all levels of depth of the graph is searched before finding the element at deepest level of the last edge. In this case, all vertices will be searched, and all edges
+connected to those vertices will be searched. So the time complexity is (V+E), where V stands for all the vertices in the graph, and E stands for all the edges in the graph. The time complexity would be 
+$\Theta(V+E)$.
