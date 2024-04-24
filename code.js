@@ -44,12 +44,12 @@ function search(list, start, value, visited, path)
 }
 
 //Bonus
-function BFS(graph, start, value) 
+function BFS(graph, start, value)
 {
     var path = [];
     var visited = new Array(graph.length).fill(0);
     
-    if (Bsearch(graph, path, visited, start, value) === false) 
+    if(Bsearch(graph,path, visited, start, value)== false)
     {
         return [];
     }
@@ -57,33 +57,47 @@ function BFS(graph, start, value)
     return path;
 }
 
-function Bsearch(graph, path, visited, start, value) 
+function Bsearch(graph, path, visited, start, value)
 {
     visited[start] = 1;
-    
-    if (start === value) 
+    var q = [];
+    if(start == value)
     {
         return true;
     }
     
-    for (var i = 0; i < graph[start].length; i++) 
+    for(var i = 0; i < graph[start].length; i++)
     {
-        if (visited[graph[start][i]] === 0) 
+        if(visited[graph[start][i]] == 0)
         {
-            if (graph[start][i] === value) 
+            if(graph[start][i] == value)
             {
                 path.unshift(graph[start][i]);
                 return true;
-            } else {
-                var p = Bsearch(graph, path, visited, graph[start][i], value);
-                if (p) 
+            }else{
+                if(!q.includes(graph[start][i]))
                 {
-                    path.unshift(graph[start][i]); 
-                    return true;
+                    q.push(graph[start][i]);
                 }
             }
+            
         }
+        visited[graph[start][i]] = 1;
+        
     }
+     
     
+    for(var j = 0; j< q.length; j++)
+    {
+        var p = Bsearch(graph,path, visited, q[j], value);
+        if(p)
+        {
+            path.unshift(q[j])
+            return true;
+        }
+        
+       
+    }
     return false;
+   
 }
