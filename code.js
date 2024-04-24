@@ -53,6 +53,7 @@ function BFS(graph, start, value)
     {
         return [];
     }
+    path.unshift(start);
     return path;
 }
 
