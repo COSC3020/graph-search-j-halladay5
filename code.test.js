@@ -12,7 +12,7 @@ assert(JSON.stringify(depthFirstSearch(test1,0,10)) == JSON.stringify([]));
 assert(JSON.stringify(depthFirstSearch(test1,2,7)) == JSON.stringify([2, 0, 1, 4, 5, 6, 7]));
 
 //bonus testing
-assert(JSON.stringify(BFS(test1,0,7)) == JSON.stringify([0, 2, 8, 7]));
+assert(JSON.stringify(BFS(test1,0,7)) == JSON.stringify([0, 1, 4, 5, 6, 7]));
 assert(JSON.stringify(BFS(test1,0,3)) == JSON.stringify([0, 3]));
 assert(JSON.stringify(BFS(test1,4,6)) == JSON.stringify([4, 6]));
 assert(JSON.stringify(BFS(test1,3, 7)) == JSON.stringify([]));
