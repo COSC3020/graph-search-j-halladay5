@@ -48,7 +48,6 @@ function BFS(graph, start, value)
 {
     var path = [];
     var visited = new Array(graph.length).fill(0);
-    
     if(Bsearch(graph,path, visited, start, value)== false)
     {
         return [];
@@ -65,8 +64,8 @@ function Bsearch(graph, path, visited, start, value)
     {
         return true;
     }
-    
-    for(var i = 0; i < graph[start].length; i++)
+    var tempLength = graph[start].length;
+    for(var i = 0; i < tempLength; i++)
     {
         if(visited[graph[start][i]] == 0)
         {
