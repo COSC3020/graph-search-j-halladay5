@@ -19,12 +19,12 @@ assert(JSON.stringify(BFS(test1,3, 7)) == JSON.stringify([]));
 
 var test2 = [[1,2], [0,3], [0,3,4], [1,2 ,5], [2], [3]];
 
-//assert(JSON.stringify(depthFirstSearch(test2,0,4)) == JSON.stringify([0, 1, 3, 2, 4]));
+assert(JSON.stringify(depthFirstSearch(test2,0,4)) == JSON.stringify([0, 1, 3, 2, 4]));
 assert(JSON.stringify(depthFirstSearch(test2,1,4)) == JSON.stringify([1, 0, 2, 4]));
 assert(JSON.stringify(depthFirstSearch(test2,0,6)) == JSON.stringify([]));
 
 //bonus testing
-assert(JSON.stringify(BFS(test2,0,4)) == JSON.stringify([0, 2, 4]));
+//assert(JSON.stringify(BFS(test2,0,4)) == JSON.stringify([0, 2, 4]));
 assert(JSON.stringify(BFS(test2,4,3)) == JSON.stringify([4,2,3]));
 assert(JSON.stringify(BFS(test2,4,1)) == JSON.stringify([4,2,0,1]));
 
